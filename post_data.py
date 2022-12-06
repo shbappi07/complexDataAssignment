@@ -39,8 +39,18 @@ post_data = [
 # Your Code Start from here
 
 
+for data in post_data:
 
+    slugText = data.get('title')
+    limitSlug = ' ' .join(slugText.split()[:3])
+    makeSlug = limitSlug.replace(' ','-')
+    slug = data.update({"slug": makeSlug})
+
+    # print(data)
+
+# example output
+
+print(post_data[4])
 
 # Your code ends here
 
-print(post_data[4])
